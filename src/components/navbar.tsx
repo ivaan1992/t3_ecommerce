@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div className="flex justify-around bg-slate-700 items-center">
       <nav>
@@ -22,12 +22,6 @@ export default function Navbar() {
               </Link>    
             </li>
             
-            <li className="ml-8">
-                <Link href="/editar-producto">
-                  Editar Producto
-                </Link>
-            </li>
-
             <li className="ml-8">
                 <Link href="/carrito">
                     Carrito De Compras
