@@ -1,11 +1,10 @@
-import Navbar from "./navbar"
+import Navbar from "../components/navbar"
 
-export default function Layout({ children}: React.PropsWithChildren) {
-    return (
-        <>
-          <Navbar />
-          { children } 
-        </>
-        
-    )
+export default function Layout({ children}) {
+  return (
+      <>
+        <Navbar />
+        { children } 
+      </>
+  )
 }
