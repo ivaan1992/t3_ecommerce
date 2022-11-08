@@ -2,6 +2,8 @@ import { prisma } from '../server/db/client';
 import type { InferGetServerSidePropsType } from "next";
 import Link from 'next/link';
 import Add from '../components/Add';
+import Counter from '../components/counter';
+import { use } from 'react';
 
 export async function getServerSideProps(context) {
   const allProducts = await prisma.product.findMany()
@@ -24,7 +26,6 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
             <p>$ Precio: {price}</p>
             <p>Descripcion del producto: {description}</p>
             <p>Cantidades Disponibles: {inventory}</p>
-            <br />
             <Link href={`/editar-producto/${name}`}>Editar</Link>
             |
             <Link href={`/ver-producto/${name}`}>Ver</Link>
@@ -33,7 +34,7 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
           </div>
         )}
       </div>
-      
+    
     </div>
   );
 }
