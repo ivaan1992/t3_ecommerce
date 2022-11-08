@@ -36,7 +36,8 @@ export default function Carrito(props) {
       {cart.map(({id, name, price, inventory}) => 
         <div key={id} className='grid grid-cols-2 gap-4 place-content-around h-48 mt-48 ml-6 center justify-center'>
           <p>Producto: {name}</p>
-          <p>Costo: {price * cartItems[id]}</p>
+          <p>Costo: {price}</p>
+          <p>Total producto: {price * cartItems[id]}</p>
           <p>Articulos agregados: {cartItems[id]}</p>
           <Link href={`/editar-producto/${name}`}>Editar</Link>
           |
