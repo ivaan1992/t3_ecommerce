@@ -1,7 +1,9 @@
 import { prisma } from '../server/db/client';
-import { InferGetServerSidePropsType } from "next";
+import type { InferGetServerSidePropsType } from "next";
 import Link from 'next/link';
 import Add from '../components/Add';
+import Counter from '../components/counter';
+import { use } from 'react';
 
 export async function getServerSideProps(context) {
   const allProducts = await prisma.product.findMany()
@@ -15,21 +17,24 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
 
   return (
     
-    <div>
-      <h1>Seccion principal</h1>
-      {props.allProducts.map(({id, name, price, description, inventory}) => 
-        <div key={id}>
-          <p>{name}</p>
-          <p>{price}</p>
-          <p>{description}</p>
-          <p>{inventory}</p>
-          <Link href={`/editar-producto/${name}`}>Editar</Link>
-          |
-          <Link href={`/ver-producto/${name}`}>Ver</Link>
-          |
-          <Add productID={id} />
-        </div>
-      )}
+    <div className=''>
+      <h1>Tienda en Linea</h1>
+      <div className='grid grid-cols-2 gap-4 place-content-around h-48 mt-48 ml-6 center justify-center'>
+        {props.allProducts.map(({id, name, price, description, inventory}) => 
+          <div key={id} className="cards ">
+            <p>Producto: {name}</p>
+            <p>$ Precio: {price}</p>
+            <p>Descripcion del producto: {description}</p>
+            <p>Cantidades Disponibles: {inventory}</p>
+            <Link href={`/editar-producto/${name}`}>Editar</Link>
+            |
+            <Link href={`/ver-producto/${name}`}>Ver</Link>
+            |
+            <Add productID={id} />
+          </div>
+        )}
+      </div>
+    
     </div>
   );
 }

@@ -18,3 +18,4 @@ model Product {
   description String
   inventory Int
 }
+
