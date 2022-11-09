@@ -14,9 +14,7 @@ interface Props {
     allProducts: Product[]
 }
 
-export default function CardProduct(props: Props) {
-    console.log(props.allProducts);
-      
+export default function CardProduct(props: Props) {      
     return (
         <div className="w-3/4 mx-auto mt-10 rounded overflow-hidden shadow-lg grid grid-cols-3 gap-5 place-content-center h-100">
             {props.allProducts.map(({id, name, price, description, inventory}) => 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { monitorEventLoopDelay } from "perf_hooks";
 import { useEffect, useState } from "react";
+import CartCard from "../components/cart-card";
 import { prisma } from '../server/db/client';
 
 
@@ -28,12 +29,14 @@ export default function Carrito(props) {
       auxTotal += (price * cartItems[id]);
     })
     setTotal(auxTotal);
-  }, [cart])
+  }, [cart, cartItems])
 
   return (
     <div>
       <h1>Seccion Carrito de compras</h1>
-      {cart.map(({id, name, price, inventory}) => 
+
+      <CartCard allProducts={[]} />
+      {/* {cart.map(({id, name, price, inventory}) => 
         <div key={id} className='grid grid-cols-2 gap-4 place-content-around h-48 mt-48 ml-6 center justify-center'>
           <p>Producto: {name}</p>
           <p>Costo: {price}</p>
@@ -44,9 +47,9 @@ export default function Carrito(props) {
           <Link href={`/ver-producto/${name}`}>Ver</Link>
           
         </div>
-      )}
-      <div className="total">
-        <h1>El total de la compra es de: {total}</h1>
+      )} */}
+      <div className="total mt-10">
+        <h1>El total de la compra es de: $ {total}.00</h1>
       </div>
     </div>
   );

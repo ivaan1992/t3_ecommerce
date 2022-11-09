@@ -16,24 +16,7 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
     
     <div className=''>
       <h1 className='text-center mt-5 text-3xl'>Tienda en Linea</h1>
-      <CardProduct allProducts={props.allProducts} />
-      
-      {/* <div className='grid grid-cols-2 gap-4 place-content-around h-48 mt-48 ml-6 center justify-center'>
-        {props.allProducts.map(({id, name, price, description, inventory}) => 
-          <div key={id} className="cards ">
-            <p>Producto: {name}</p>
-            <p>$ Precio: {price}</p>
-            <p>Descripcion del producto: {description}</p>
-            <p>Cantidades Disponibles: {inventory}</p>
-            <Link href={`/editar-producto/${name}`}>Editar</Link>
-            |
-            <Link href={`/ver-producto/${name}`}>Ver</Link>
-            |
-            <Add productID={id} />
-          </div>
-        )}
-      </div> */}
-    
+      <CardProduct allProducts={props.allProducts} />    
     </div>
   );
 }
