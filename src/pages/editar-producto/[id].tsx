@@ -27,7 +27,7 @@ export default function EditarProducto(props: InferGetServerSidePropsType<typeof
 
   return (
     <div>
-      <h1>Seccion Editar Producto</h1>
+      <h1 className='text-center mt-5 text-3xl'>Editar Producto</h1>
       <Form {...props.product} onSubmit={updateProduct} edit></Form>
     </div>
   );
