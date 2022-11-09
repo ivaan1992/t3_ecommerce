@@ -18,9 +18,9 @@ export default function CardProduct(props: Props) {
     console.log(props.allProducts);
       
     return (
-        <div className="max-w rounded overflow-hidden shadow-lg grid grid-cols-3 gap-3 place-content-center h-100 w-50">
+        <div className="w-3/4 mx-auto mt-10 rounded overflow-hidden shadow-lg grid grid-cols-3 gap-5 place-content-center h-100">
             {props.allProducts.map(({id, name, price, description, inventory}) => 
-                <div key={id} className="flex flex-col border-4 border-indigo-500/100">
+                <div key={id} className="flex flex-col border-2 border-blue-400 shadow-md">
                     <Image src="/images/nia.jpg" alt="" width={100} height={100}/>
                     <div className="px-6 py-4">
                       <div className="font-bold text-xl mb-2">{name}</div>
@@ -32,7 +32,7 @@ export default function CardProduct(props: Props) {
                         {price}
                       </p>
                       <p className="text-gray-700 text-base">
-                        Productos Disponibles: 
+                        Productos Disponibles:
                         {inventory}
                       </p>
                     </div>
