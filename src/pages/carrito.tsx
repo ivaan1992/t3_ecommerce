@@ -33,24 +33,8 @@ export default function Carrito(props) {
 
   return (
     <div>
-      <h1>Seccion Carrito de compras</h1>
-
+      <h1 className='text-center mt-5 text-3xl'>Seccion Carrito de compras</h1>
       <CartCard allProducts={[]} />
-      {/* {cart.map(({id, name, price, inventory}) => 
-        <div key={id} className='grid grid-cols-2 gap-4 place-content-around h-48 mt-48 ml-6 center justify-center'>
-          <p>Producto: {name}</p>
-          <p>Costo: {price}</p>
-          <p>Total producto: {price * cartItems[id]}</p>
-          <p>Articulos agregados: {cartItems[id]}</p>
-          <Link href={`/editar-producto/${name}`}>Editar</Link>
-          |
-          <Link href={`/ver-producto/${name}`}>Ver</Link>
-          
-        </div>
-      )} */}
-      <div className="total mt-10">
-        <h1>El total de la compra es de: $ {total}.00</h1>
-      </div>
     </div>
   );
 }

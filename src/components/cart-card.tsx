@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from "react";
-
 interface Product {
     id: string;
     name: string;
@@ -39,14 +37,11 @@ export default function CartCard(props: Props) {
     setTotal(auxTotal);
   }, [cart, cartItems])
 
-  const eliminarDelCarrito = () => {
-    alert(id)
-  }
     return (
         
         
             <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                {cart.map(({id, name, price, inventory}) => 
+                {cart.map(({id, name, price,}) => 
                     <div key={id}>
                        <div className="mt-5 ml-10">
                            <Image src="/images/nia.jpg" alt="" width={100} height={50}/>
@@ -60,9 +55,14 @@ export default function CartCard(props: Props) {
                         </div>
                        </div>
                     </div>
+                    
                 )}
+                <div className="total mt-10">
+                  <h1 className='text-center mt-5 text-2xl'>El total de la compra es de: $ {total}.00</h1>
+                </div>
                
             </div>
+            
         
 
         

@@ -21,7 +21,7 @@ export default function VerProducto(props: InferGetServerSidePropsType<typeof ge
     
     return (
       <div className='flex flex-col'>
-        <h1>Seccion Ver Producto</h1>
+        <h1 className='text-center mt-5 text-3xl'>Ver Producto</h1>
         <ul className='flex flex-col'>
           <li>
             <Image src="/images/nia.jpg" alt="" width={300} height={300}/>

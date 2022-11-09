@@ -18,7 +18,7 @@ export default function CrearProducto(props) {
 
   return (
     <div>
-      <h1>Seccion Crear Producto</h1>
+      <h1 className='text-center mt-5 text-3xl'>Crear Producto</h1>
       <Form onSubmit={createProduct}></Form>
     </div>
   );
