@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
     <div className="flex justify-around bg-slate-700 items-center">
       <nav>
