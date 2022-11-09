@@ -1,28 +1,51 @@
-# Create T3 App
+![image](https://user-images.githubusercontent.com/73128809/200919931-1c041f3a-9ffb-4521-89ad-736b10b8e1b3.png)
 
-This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
+# Ecommerce-App
 
-## What's next? How do I make an app with this?
+This is an e-commerce demo app that I've create in NextJS framework. This is for a technical test. 
 
-We try to keep this project as simple as possible, so you can start with the most basic configuration and then move on to more advanced configuration.
+## 🛠️ Built With ⚒️
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- NextJS
+- React
+- Typescript
+- TailwindCSS
+- Prisma
+## Getting Started
 
-- [Next-Auth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [TailwindCSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+To get a local copy, run these simple steps in your terminal:
 
-We also [roll our own docs](https://beta.create.t3.gg) with some summary information and links to the respective documentation.
+- Go to the folder where you want to store the project.
+- Clone the repo with this command: 
+    ``` 
+    git@github.com:ivaan1992/t3_ecommerce.git
+    ```
+- Once you have clone the repo, run this command in your terminal: ` yarn dev `
+- If you follow these steps, you can see my project in your browser in the access: `` http://localhost:3000/ ``.
 
-Also checkout these awesome tutorials on `create-t3-app`.
+## Author
 
-- [Build a Blog With the T3 Stack - tRPC, TypeScript, Next.js, Prisma & Zod](https://www.youtube.com/watch?v=syEWlxVFUrY)
-- [Build a Live Chat Application with the T3 Stack - TypeScript, Tailwind, tRPC](https://www.youtube.com/watch?v=dXRRY37MPuk)
-- [Build a full stack app with create-t3-app](https://www.nexxel.dev/blog/ct3a-guestbook)
-- [A first look at create-t3-app](https://dev.to/ajcwebdev/a-first-look-at-create-t3-app-1i8f)
+👤 **Ivan Gaona**
 
-## How do I deploy this?
+- GitHub: [@ivaan1992](https://github.com/ivaan1992)
+- Twitter: [@ivangaona92](https://twitter.com/ivangaona92)
+- LinkedIn: [Ivan92](https://www.linkedin.com/in/ivan-linares-gaona/)
 
-Follow our deployment guides for [Vercel](https://beta.create.t3.gg/en/deployment/vercel) and [Docker](https://beta.create.t3.gg/en/deployment/docker) for more information.
-# t3_ecommerce
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Based on Nelson [Sakwa on Behance](https://www.behance.net/sakwadesignstudio) design.
+
+## 📝 License
+
+This project is [MIT](./mit.md) licensed.
