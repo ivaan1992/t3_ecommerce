@@ -33,7 +33,7 @@ export default function Carrito(props) {
 
   return (
     <div>
-      <h1 className='text-center mt-5 text-3xl'>Seccion Carrito de compras</h1>
+      <h1 className='text-center mt-5 text-3xl'>Carrito de compras</h1>
       <CartCard allProducts={[]} />
     </div>
   );
